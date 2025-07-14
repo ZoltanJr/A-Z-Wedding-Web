@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Wedding</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display:wght@400;700&family=Quicksand:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: 'Archivo', sans-serif;
+        background-color: #6da190;
+        color: #2e1f1f;
+        margin: 0;
+        padding: 0;
+        font-size: 1.5rem;
+        font-weight: 200;
+        font-style: normal;
+        font-variation-settings: 'wdth' 200;
+      }
+      .language-switcher {
+        position: absolute;
+        top: 2.5rem;
+        right: 6rem;
+        display: flex;
+        gap: 1rem;
+        z-index: 2;
+      }
+      .language-switcher img {
+        width: 50px;
+        height: auto;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+      header {
+        padding: 2rem 1rem;
+        text-align: center;
+        color: #262b47;
+      }
+
+      header h1 {
+        font-family: 'Alex Brush', cursive;
+        font-size: 4rem;
+        margin: 0;
+      }
+      .symbols {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 1.4rem;
+      }
+      main {
+        max-width: 80%;
+        margin: auto;
+        line-height: 2rem;
+      }
+      section {
+        margin: 12rem;
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+        background: none;
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+        max-width: 100%;
+      }
+      h2 {
+        font-family: 'Archivo', sans-serif;
+        font-size: 2rem;
+        color: #262b47;
+        border-bottom: 1px solid #517118;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        font-size: 1.5rem;
+      }
+      footer {
+        text-align: center;
+        padding: 0.5rem 1rem;
+        background-color: #6da190;
+        color: #262b47;
+        text-shadow: none;
+        border-top: 2px solid #517118;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+      }
+      a.button {
+        display: inline-block;
+        padding: 6px 30px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+        background-color: #262b47;
+        border: none;
+        border-radius: 8px;
+        text-decoration: none;
+        box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+      a.button:hover {
+        background-color: #0056b3;
+        transform: translateY(-2px);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="language-switcher">
+        <img
+          src="https://flagcdn.com/w40/gb.png"
+          alt="English"
+          onclick="switchLanguage('en')"
+        />
+        <img
+          src="https://flagcdn.com/w40/hu.png"
+          alt="Hungarian"
+          onclick="switchLanguage('hu')"
+        />
+      </div>
+      <h1>A & Z</h1>
+      <div class="symbols">
+        <span class="icon">🦆</span>
+        <span class="rings">💍💍</span>
+        <span class="icon">🐢</span>
+      </div>
+      <img
+        id="cute-picture"
+        src="cute-picture.png"
+        alt="A Cute Picture of a Beautiful Couple"
+        style="
+          width: 90%;
+          margin: 1rem;
+          margin-top: 2rem;
+          margin-bottom: 0rem;
+          border-radius: 50px;
+          border: 1px solid #517118;
+        "
+      />
+    </header>
+
+    <main>
+      <div style="display: flex; gap: 1rem">
+        <div style="flex: 2; display: flex; flex-direction: column; gap: 1rem">
+          <section id="welcome">
+            <h2 id="welcome-title">Kedves családunk és barátaink!</h2>
+            <p id="welcome-text">
+              Sok örömmel jelentjük ki, hogy 2026 tavaszán összeházasodunk és
+              szeretettel hívunk meg titeket esküvőnkre.
+            </p>
+          </section>
+
+          <section id="details">
+            <h2 id="details-title">Részletek</h2>
+            <p id="details-content">
+              <strong><span id="label-date">Dátum:</span></strong>
+              <span id="date-text">2026. Április 11.</span><br />
+              <strong><span id="label-venue">Helyszín:</span></strong>
+              <span id="venue-text"
+                >Harlekin Birtok, Ceglédbercel, Homokrész 1/A, 2737</span
+              >
+            </p>
+          </section>
+
+          <section id="schedule">
+            <h2 id="schedule-title">Menetrend</h2>
+            <p id="schedule-text">
+              Hamarosan frissítjük ezt a szekciót. A részletek még szervezés
+              alatt!
+            </p>
+          </section>
+
+          <section id="rsvp">
+            <h2 id="rsvp-title">RSVP</h2>
+            <p id="rsvp-text">
+              Kérjük töltsétek ki a következő kérdőívet 2025 Augusztus végéig:
+            </p>
+            <a
+              href="https://bt3ffekb.forms.app/wedding-rsvp-1"
+              class="button"
+              target="_blank"
+            >
+              RSVP
+            </a>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        <span id="footer-text">Szeretettel: Alexandra & Zoli</span>
+      </p>
+    </footer>
+
+    <script>
+      function switchLanguage(lang) {
+        const text = {
+          en: {
+            welcome: 'Dear family and friends!',
+            welcomeMsg:
+              "We’re so excited to welcome you to our wedding celebration. Surrounded by love, laughter, and a touch of nature’s elegance, we can't wait to share this day with you.",
+            details: 'Details',
+            schedule: 'Schedule',
+            scheduleText: 'To be determined. We will update this section soon!',
+            rsvp: 'RSVP',
+            emailText:
+              'Please send us the following form before the end of 2025 August:',
+            footer: 'With love, Alexandra & Zoli',
+            dateText: 'Date:',
+            date: '2026. April 11.',
+            time: 'TBD',
+            venueLabel: 'Venue:',
+            venue: 'Harlekin Birtok, Ceglédbercel, Homokrész 1/A, 2737',
+          },
+          hu: {
+            welcome: 'Kedves családunk és barátaink!',
+            welcomeMsg:
+              'Sok örömmel jelentjük ki, hogy 2026 tavaszán összeházasodunk és szeretettel hívunk meg titeket esküvőnkre!',
+            details: 'Részletek',
+            schedule: 'Menetrend',
+            scheduleText:
+              'Hamarosan frissítjük ezt a szekciót. A részletek még szervezés alatt!',
+            rsvp: 'RSVP',
+            emailText:
+              'Kérjük töltsétek ki a következő kérdőívet 2025 Augusztus végéig:',
+            footer: 'Szeretettel: Alexandra & Zoli',
+            dateText: 'Dátum:',
+            date: '2026. Április 11.',
+            time: 'TBD',
+            venueLabel: 'Helyszín:',
+            venue: 'Harlekin Birtok, Ceglédbercel, Homokrész 1/A, 2737',
+          },
+        };
+        document.getElementById('welcome-title').innerText = text[lang].welcome;
+        document.getElementById('welcome-text').innerText =
+          text[lang].welcomeMsg;
+        document.getElementById('schedule-title').innerText =
+          text[lang].schedule;
+        document.getElementById('schedule-text').innerText =
+          text[lang].scheduleText;
+        document.getElementById('rsvp-text').innerText = text[lang].emailText;
+        document.getElementById('footer-text').innerText = text[lang].footer;
+        document.getElementById('date-text').innerText = text[lang].date;
+        document.getElementById('venue-text').innerText = text[lang].venue;
+        document.getElementById('details-title').innerText = text[lang].details;
+        document.getElementById('label-date').innerText = text[lang].dateText;
+        document.getElementById('label-venue').innerText =
+          text[lang].venueLabel;
+      }
+      window.onload = () => switchLanguage('hu');
+    </script>
+  </body>
+</html>
