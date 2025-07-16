@@ -27,10 +27,8 @@
         font-variation-settings: 'wdth' 200;
       }
       .language-switcher {
-        position: absolute;
-        top: 2.5rem;
-        right: 6rem;
         display: flex;
+        margin: auto;
         gap: 1rem;
         z-index: 2;
       }
@@ -66,7 +64,7 @@
         line-height: 2rem;
       }
       section {
-        margin: 12rem;
+        margin: 10%;
         margin-top: 2rem;
         margin-bottom: 4rem;
         background: none;
@@ -104,6 +102,8 @@
       a.button {
         display: inline-block;
         padding: 6px 30px;
+        width: 50px;
+        margin-top: 1rem;
         font-size: 16px;
         font-weight: bold;
         color: #fff;
@@ -123,18 +123,6 @@
   </head>
   <body>
     <header>
-      <div class="language-switcher">
-        <img
-          src="https://flagcdn.com/w40/gb.png"
-          alt="English"
-          onclick="switchLanguage('en')"
-        />
-        <img
-          src="https://flagcdn.com/w40/hu.png"
-          alt="Hungarian"
-          onclick="switchLanguage('hu')"
-        />
-      </div>
       <h1>A & Z</h1>
       <div class="symbols">
         <span class="icon">🦆</span>
@@ -159,6 +147,18 @@
     <main>
       <div style="display: flex; gap: 1rem">
         <div style="flex: 2; display: flex; flex-direction: column; gap: 1rem">
+          <div class="language-switcher">
+            <img
+              src="https://flagcdn.com/w40/gb.png"
+              alt="English"
+              onclick="switchLanguage('en')"
+            />
+            <img
+              src="https://flagcdn.com/w40/hu.png"
+              alt="Hungarian"
+              onclick="switchLanguage('hu')"
+            />
+          </div>
           <section id="welcome">
             <h2 id="welcome-title">Kedves családunk és barátaink!</h2>
             <p id="welcome-text">
@@ -188,17 +188,18 @@
           </section>
 
           <section id="rsvp">
-            <h2 id="rsvp-title">RSVP</h2>
+            <h2 id="rsvp-title">
+              <a
+                href="https://bt3ffekb.forms.app/wedding-rsvp-1"
+                class="button"
+                target="_blank"
+              >
+                RSVP
+              </a>
+            </h2>
             <p id="rsvp-text">
-              Kérjük töltsétek ki a következő kérdőívet 2025 Augusztus végéig:
+              Kérjük töltsétek ki a kérdőívet 2025 Augusztus végéig!
             </p>
-            <a
-              href="https://bt3ffekb.forms.app/wedding-rsvp-1"
-              class="button"
-              target="_blank"
-            >
-              RSVP
-            </a>
           </section>
         </div>
       </div>
@@ -222,7 +223,7 @@
             scheduleText: 'To be determined. We will update this section soon!',
             rsvp: 'RSVP',
             emailText:
-              'Please send us the following form before the end of 2025 August:',
+              'Please complete this RSVP form before the end of 2025 August!',
             footer: 'With love, Alexandra & Zoli',
             dateText: 'Date:',
             date: '2026. April 11.',
@@ -240,7 +241,7 @@
               'Hamarosan frissítjük ezt a szekciót. A részletek még szervezés alatt!',
             rsvp: 'RSVP',
             emailText:
-              'Kérjük töltsétek ki a következő kérdőívet 2025 Augusztus végéig:',
+              'Kérjük töltsétek ki a következő kérdőívet 2025 Augusztus végéig!',
             footer: 'Szeretettel: Alexandra & Zoli',
             dateText: 'Dátum:',
             date: '2026. Április 11.',
