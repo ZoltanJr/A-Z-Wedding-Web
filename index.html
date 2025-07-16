@@ -116,6 +116,7 @@
       }
       a.button:hover {
         background-color: #0056b3;
+        color: #fff;
         transform: translateY(-2px);
         cursor: pointer;
       }
@@ -230,11 +231,21 @@
           </section>
 
           <section id="rsvp">
-            <h2 id="rsvp-title">
+            <h2>
               <a
+                id="link-hun"
                 href="https://bt3ffekb.forms.app/wedding-rsvp-1"
                 class="button"
                 target="_blank"
+              >
+                RSVP
+              </a>
+              <a
+                id="link-eng"
+                href="https://bt3ffekb.forms.app/wedding-rsvp"
+                class="button"
+                target="_blank"
+                style="display: none"
               >
                 RSVP
               </a>
@@ -254,6 +265,19 @@
     </footer>
 
     <script>
+      function switchLinks(lang) {
+        const linkEng = document.getElementById('link-eng');
+        const linkHun = document.getElementById('link-hun');
+
+        if (lang == 'hu') {
+          linkHun.style.display = 'inline-block';
+          linkEng.style.display = 'none';
+        } else {
+          linkHun.style.display = 'none';
+          linkEng.style.display = 'inline-block';
+        }
+      }
+
       function switchLanguage(lang) {
         const text = {
           en: {
@@ -327,7 +351,10 @@
         document.getElementById('venue-text').innerText = text[lang].venueText;
         document.getElementById('label-travel').innerText =
           text[lang].labelTravel;
+
+        switchLinks(lang);
       }
+
       window.onload = () => switchLanguage('hu');
     </script>
   </body>
