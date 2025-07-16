@@ -119,6 +119,30 @@
         transform: translateY(-2px);
         cursor: pointer;
       }
+      h3 {
+        font-family: 'Alex Brush', cursive;
+        font-size: 3rem;
+        line-height: 3rem;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+      h6 {
+        font-style: italic;
+        font-weight: normal;
+        text-align: right;
+        margin-top: 0;
+        padding-top: 0;
+        margin-bottom: 2rem;
+      }
+      a {
+        color: #262b47;
+        transition: color 0.3s ease, transform 0.2s ease;
+      }
+      a:hover {
+        color: #0056b3;
+        transform: translateY(-2px);
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
@@ -160,7 +184,11 @@
             />
           </div>
           <section id="welcome">
-            <h2 id="welcome-title">Kedves családunk és barátaink!</h2>
+            <h3 id="welcome-title">
+              A hölgyek képzelete igen gyorsan száguld, s egy pillanat alatt a
+              tetszéstől a szerelemig, a szerelemtől a házasságig szökken.
+            </h3>
+            <h6 id="author">Jane Austen: Büszkeség és Balítélet</h6>
             <p id="welcome-text">
               Sok örömmel jelentjük ki, hogy 2026 tavaszán összeházasodunk és
               szeretettel hívunk meg titeket esküvőnkre.
@@ -171,10 +199,22 @@
             <h2 id="details-title">Részletek</h2>
             <p id="details-content">
               <strong><span id="label-date">Dátum:</span></strong>
-              <span id="date-text">2026. Április 11.</span><br />
+              <span id="date-text">2026. Április 11.</span>
+              <br />
               <strong><span id="label-venue">Helyszín:</span></strong>
+              <span id="venue"
+                >Harlekin Birtok, Ceglédbercel, Homokrész 1/A, 2737
+              </span>
+              <br />
+              <strong><span id="label-travel">Megközelítés:</span></strong>
               <span id="venue-text"
-                >Harlekin Birtok, Ceglédbercel, Homokrész 1/A, 2737</span
+                >A vasútállomástól csupán 5 perc séta.
+              </span>
+              <br />
+              <a
+                id="travel-map"
+                href="https://maps.app.goo.gl/gBvQuhhHVGKLiAv78"
+                >Autóval Budapestről</a
               >
             </p>
           </section>
@@ -215,44 +255,56 @@
       function switchLanguage(lang) {
         const text = {
           en: {
-            welcome: 'Dear family and friends!',
+            welcome:
+              "A lady's imagination is very rapid; it jumps from admiration to love, from love to matrimony in a moment. (Pride and Prejudice, Jane Austen)",
+            author: 'Pride and Prejudice, Jane Austen',
             welcomeMsg:
-              "We’re so excited to welcome you to our wedding celebration. Surrounded by love, laughter, and a touch of nature’s elegance, we can't wait to share this day with you.",
+              'Our Beloved Family and Friends! We would like to invite you to celebrate together our marriage.',
             details: 'Details',
             schedule: 'Schedule',
             scheduleText: 'To be determined. We will update this section soon!',
             rsvp: 'RSVP',
             emailText:
-              'Please complete this RSVP form before the end of 2025 August!',
+              'Please fill the form until the end of August 2025. If you have any questions, please do not hesitate to contact us via phone, message or e-mail!',
             footer: 'With love, Alexandra & Zoli',
             dateText: 'Date:',
             date: '2026. April 11.',
             time: 'TBD',
             venueLabel: 'Venue:',
             venue: 'Harlekin Birtok, Ceglédbercel, Homokrész 1/A, 2737',
+            travelMap: 'With car from Budapest',
+            venueText:
+              'It is only 5 minutes walking distance from the Ceglédbercel train station.',
+            labelTravel: 'How to get there:',
           },
           hu: {
-            welcome: 'Kedves családunk és barátaink!',
+            welcome:
+              'A hölgyek képzelete igen gyorsan száguld, s egy pillanat alatt a tetszéstől a szerelemig, a szerelemtől a házasságig szökken.',
+            author: 'Jane Austen: Büszkeség és Balítélet',
             welcomeMsg:
-              'Sok örömmel jelentjük ki, hogy 2026 tavaszán összeházasodunk és szeretettel hívunk meg titeket esküvőnkre!',
+              'Kedves családunk és barátaink! Sok szeretettel hívunk meg Benneteket, hogy együtt ünnepeljük házasságkötésünk alkalmából!',
             details: 'Részletek',
             schedule: 'Menetrend',
             scheduleText:
               'Hamarosan frissítjük ezt a szekciót. A részletek még szervezés alatt!',
             rsvp: 'RSVP',
             emailText:
-              'Kérjük töltsétek ki a következő kérdőívet 2025 Augusztus végéig!',
+              'Kérjük töltsétek ki a kérdőívet 2025 augusztus végéig! Kérdés esetén forduljatok hozzánk mihamarabb telefonon, üzenetben vagy e-mailben.',
             footer: 'Szeretettel: Alexandra & Zoli',
             dateText: 'Dátum:',
             date: '2026. Április 11.',
             time: 'TBD',
             venueLabel: 'Helyszín:',
             venue: 'Harlekin Birtok, Ceglédbercel, Homokrész 1/A, 2737',
+            travelMap: 'Autóval Budapestről',
+            venueText: 'A vasútállomástól csupán 5 perc séta.',
+            labelTravel: 'Megközelítés:',
           },
         };
         document.getElementById('welcome-title').innerText = text[lang].welcome;
         document.getElementById('welcome-text').innerText =
           text[lang].welcomeMsg;
+        document.getElementById('author').innerText = text[lang].author;
         document.getElementById('schedule-title').innerText =
           text[lang].schedule;
         document.getElementById('schedule-text').innerText =
@@ -265,6 +317,10 @@
         document.getElementById('label-date').innerText = text[lang].dateText;
         document.getElementById('label-venue').innerText =
           text[lang].venueLabel;
+        document.getElementById('travel-map').innerText = text[lang].travelMap;
+        document.getElementById('venue-text').innerText = text[lang].venueText;
+        document.getElementById('label-travel').innerText =
+          text[lang].labelTravel;
       }
       window.onload = () => switchLanguage('hu');
     </script>
