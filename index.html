@@ -124,15 +124,12 @@
         font-size: 3rem;
         line-height: 3rem;
         margin-bottom: 0;
-        padding-bottom: 0;
       }
       h6 {
         font-style: italic;
         font-weight: normal;
         text-align: right;
         margin-top: 0;
-        padding-top: 0;
-        margin-bottom: 2rem;
       }
       a {
         color: #262b47;
@@ -183,15 +180,20 @@
               onclick="switchLanguage('hu')"
             />
           </div>
-          <section id="welcome">
-            <h3 id="welcome-title">
+
+          <section id="fancy-quote">
+            <h3 id="quote-title">
               A hölgyek képzelete igen gyorsan száguld, s egy pillanat alatt a
               tetszéstől a szerelemig, a szerelemtől a házasságig szökken.
             </h3>
             <h6 id="author">Jane Austen: Büszkeség és Balítélet</h6>
+          </section>
+
+          <section id="welcome">
+            <h2 id="welcome-title">Kedves családunk és barátaink!</h2>
             <p id="welcome-text">
-              Sok örömmel jelentjük ki, hogy 2026 tavaszán összeházasodunk és
-              szeretettel hívunk meg titeket esküvőnkre.
+              Sok szeretettel hívunk meg Benneteket, hogy együtt ünnepeljünk
+              házasságkötésünk alkalmából!
             </p>
           </section>
 
@@ -255,11 +257,12 @@
       function switchLanguage(lang) {
         const text = {
           en: {
-            welcome:
-              "A lady's imagination is very rapid; it jumps from admiration to love, from love to matrimony in a moment.",
+            quoteText:
+              '"A lady\'s imagination is very rapid; it jumps from admiration to love, from love to matrimony in a moment."',
             author: 'Pride and Prejudice, Jane Austen',
+            welcomeTitle: 'Our Beloved Family and Friends!',
             welcomeMsg:
-              'Our Beloved Family and Friends! We would like to invite you to celebrate together our marriage.',
+              'We would like to invite you to celebrate together our marriage.',
             details: 'Details',
             schedule: 'Schedule',
             scheduleText: 'To be determined. We will update this section soon!',
@@ -272,17 +275,18 @@
             time: 'TBD',
             venueLabel: 'Venue:',
             venue: 'Harlekin Birtok, Ceglédbercel, Homokrész 1/A, 2737',
-            travelMap: 'With car from Budapest',
+            travelMap: 'Travel plan with car',
             venueText:
               'It is only 5 minutes walking distance from the Ceglédbercel train station.',
             labelTravel: 'How to get there:',
           },
           hu: {
-            welcome:
-              'A hölgyek képzelete igen gyorsan száguld, s egy pillanat alatt a tetszéstől a szerelemig, a szerelemtől a házasságig szökken.',
+            quoteText:
+              '"A hölgyek képzelete igen gyorsan száguld, s egy pillanat alatt a tetszéstől a szerelemig, a szerelemtől a házasságig szökken."',
             author: 'Jane Austen: Büszkeség és Balítélet',
+            welcomeTitle: 'Kedves családunk és barátaink!',
             welcomeMsg:
-              'Kedves családunk és barátaink! Sok szeretettel hívunk meg Benneteket, hogy együtt ünnepeljük házasságkötésünk alkalmából!',
+              'Sok szeretettel hívunk meg Benneteket, hogy együtt ünnepeljünk házasságkötésünk alkalmából!',
             details: 'Részletek',
             schedule: 'Menetrend',
             scheduleText:
@@ -296,12 +300,14 @@
             time: 'TBD',
             venueLabel: 'Helyszín:',
             venue: 'Harlekin Birtok, Ceglédbercel, Homokrész 1/A, 2737',
-            travelMap: 'Autóval Budapestről',
-            venueText: 'A vasútállomástól csupán 5 perc séta.',
+            travelMap: 'Útvonalterv autóval',
+            venueText: 'Ceglédbercel vasútállomástól csupán 5 perc séta.',
             labelTravel: 'Megközelítés:',
           },
         };
-        document.getElementById('welcome-title').innerText = text[lang].welcome;
+        document.getElementById('quote-title').innerText = text[lang].quoteText;
+        document.getElementById('welcome-title').innerText =
+          text[lang].welcomeTitle;
         document.getElementById('welcome-text').innerText =
           text[lang].welcomeMsg;
         document.getElementById('author').innerText = text[lang].author;
